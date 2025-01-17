@@ -1,3 +1,27 @@
+# Merge Strings Alternately
+
+This repository contains the solution to **LeetCode Problem 1768: Merge Strings Alternately**.
+
+## Problem Statement
+
+You are given two strings `word1` and `word2`. Merge the strings by adding letters in alternating order, starting with `word1`. If a string is longer than the other, append the additional letters onto the end of the merged string.
+
+### Examples
+
+#### Example 1:
+- **Input:** `word1 = "abc"`, `word2 = "pqr"`
+- **Output:** `"apbqcr"`
+- **Explanation:**
+
+#### Example 2:
+- **Input:** `word1 = "ab"`, `word2 = "pqrs"`
+- **Output:** `"apbqrs"`
+- **Explanation:**
+
+#### Example 3:
+- **Input:** `word1 = "abcd"`, `word2 = "pq"`
+- **Output:** `"apbqcd"`
+- **Explanation:**
 
 ---
 
