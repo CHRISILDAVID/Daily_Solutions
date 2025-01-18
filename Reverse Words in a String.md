@@ -1,6 +1,3 @@
-README for LeetCode Problem "Reverse Words in a String"
-=====================================================
-
 Title: Reverse Words in a String
 -----------------------------
 
