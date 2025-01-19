@@ -42,24 +42,6 @@ class Solution:
 ```
 The code works by iterating through both arrays, and for each element in `nums1`, it checks if the corresponding element in `nums2` is less than it. If it is, they are merged into a single array using the `insert` method. Once both arrays are merged, the median is found by taking the average of the two middle elements (or the single middle element if there are an odd number of elements).
 
-### Code Example (formatted in markdown)
-```
-# Median of Two Sorted Arrays
-
-def findMedianSortedArrays(nums1, nums2):
-    # Sort both arrays
-    nums1.sort()
-    nums2.sort()
-
-    # Merge the two arrays
-    merged_array = list(set(nums1 + nums2).intersection())
-
-    # Find the median of the merged array
-    if len(merged_array) % 2 == 0:
-        return (merged_array[len(merged_array) // 2] + merged_array [(len(merged_array) // 2) - 1]) / 2
-    else:
-        return merged_array[len(merged_array) // 2]
-```
 ### Additional Insights
 
 * The solution has a time complexity of O(log(m+n)), which is the optimal time complexity for this problem.
