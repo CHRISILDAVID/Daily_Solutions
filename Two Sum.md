@@ -8,7 +8,6 @@ You may assume that each input would have exactly one solution, and you may not 
 
 You can return the answer in any order.
 
----
 
 ## Example Test Cases
 
@@ -31,19 +30,12 @@ You can return the answer in any order.
 
 ## Solution
 ```python
-from typing import List
 
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
-        # Dictionary to store seen numbers and their indices
         s = {}
-        # Iterate through the array with indices
-        for i, n in enumerate(nums):
-            # Calculate the difference needed to reach the target
+        for i, n in enumerate(nums): # iterate the array and add all the values as keys and their index positions as values of the dictionary "s" until the complement of the target when subtracted with the current element of the array is found in s
             diff = target - n
-            # Check if the difference is already in the dictionary
             if diff in s:
-                # Return the indices of the two numbers
                 return [s[diff], i]
-            # Store the current number with its index
             s[n] = i
