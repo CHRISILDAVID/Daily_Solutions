@@ -1,0 +1,54 @@
+# 3. Longest Substring Without Repeating Characters
+
+Given a string s, find the length of the longest substring without repeating characters.
+
+---
+
+## Example Test Cases
+
+### Example 1
+- **Input**:  
+  `s = "abcabcbb"`
+- **Output**:  
+  `3`
+- **Explanation**:  
+  The answer is `"abc"`, with the length of 3.
+
+---
+
+### Example 2
+- **Input**:  
+  `s = "bbbbb"`
+- **Output**:  
+  `1`
+- **Explanation**:  
+  The answer is `"b"`, with the length of 1.
+
+---
+
+### Example 3
+- **Input**:  
+  `s = "pwwkew"`
+- **Output**:  
+  `3`
+- **Explanation**:  
+  The answer is `"wke"`, with the length of 3. Notice that the substring must be continuous; `"pwke"` is not valid as it is a subsequence, not a substring.
+
+---
+
+## Solution
+```python
+
+class Solution(object):
+    def lengthOfLongestSubstring(self, s): # Two pointer solution
+        a = set() # set is used for faster retrieval O(1)
+        i = 0
+        m = 0
+        for j in range(len(s)): # String iter
+            while s[j] in a: # To check if substring from i:j got repeating characters...
+                m=max(m, len(a)) # if repeating character found then current j-i is compared for max with previous max and stores it as max 
+                a.remove(s[i]) # adjust i and s for current substring
+                i += 1
+            a.add(s[j]) # add right pointer elements to set no matter what happens
+        m=max(m, len(a)) # to check max for final element
+        return m
