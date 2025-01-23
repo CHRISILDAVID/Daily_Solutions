@@ -34,7 +34,7 @@ You can return the answer in any order.
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         s = {}
-        for i, n in enumerate(nums): # iterate the array and add all the values as keys and their index positions as values of the dictionary "s" until the complement of the target when subtracted with the current element of the array is found in s
+        for i, n in enumerate(nums): # iterate the array and add all its elements as keys and their index positions as values of the dictionary "s" until the complement of the target when subtracted with the current element of the array is found in s
             diff = target - n
             if diff in s:
                 return [s[diff], i]
