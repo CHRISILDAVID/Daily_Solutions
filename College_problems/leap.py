@@ -1,5 +1,5 @@
 def isleap(n):
-    if y%4 == 0 and y %100 !=0 or y%400 == 0:
+    if n%4 == 0 and n%100 != 0 or n%400 == 0:
         return True
     else:
         return False
